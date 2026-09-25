@@ -1,0 +1,710 @@
+[
+  {
+    "name": "Aperture Studios",
+    "category": "Photography",
+    "city": "Mumbai",
+    "rating": 4.9,
+    "reviews": 128,
+    "price": "From ₹1.8L",
+    "priceValue": 1800000,
+    "description": "Editorial and wedding storytelling with cinematic lighting, luxury retouching, and a polished luxury experience.",
+    "services": [
+      "Wedding Films",
+      "Editorial Shoots",
+      "Cinematic Portraits"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Under 2 hrs",
+    "availability": "Booked for this month",
+    "verified": true,
+    "match": 96,
+    "image": "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#F3ECE3] via-[#F8F1E7] to-[#FCFBF8]",
+    "review": "“Flawless storytelling and an effortless premium experience.”"
+  },
+  {
+    "name": "Kala Frames",
+    "category": "Photography",
+    "city": "Chennai",
+    "rating": 4.7,
+    "reviews": 92,
+    "price": "From ₹1.4L",
+    "priceValue": 1400000,
+    "description": "Fine art photography for destination events, private soirées, and intimate celebrations.",
+    "services": [
+      "Pre-wedding",
+      "Wedding Photography",
+      "Lifestyle Sessions"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 4 hrs",
+    "availability": "Available this week",
+    "verified": true,
+    "match": 91,
+    "image": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EEE5DA] via-[#F7EEE2] to-[#FDF8F1]",
+    "review": "“Their light and composition feel editorial and timeless.”"
+  },
+  {
+    "name": "Pixel Story",
+    "category": "Photography",
+    "city": "Bengaluru",
+    "rating": 4.8,
+    "reviews": 108,
+    "price": "From ₹1.6L",
+    "priceValue": 1600000,
+    "description": "Story-led photography with a modern editorial hand and seamless client experience.",
+    "services": [
+      "Destination Weddings",
+      "Couple Portraits",
+      "Brand Content"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Under 3 hrs",
+    "availability": "Available next week",
+    "verified": true,
+    "match": 94,
+    "image": "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EFE6D9] via-[#F8F0E6] to-[#FFFDFC]",
+    "review": "“A polished, calm team that handled every detail beautifully.”"
+  },
+  {
+    "name": "LensCraft",
+    "category": "Photography",
+    "city": "Delhi NCR",
+    "rating": 4.9,
+    "reviews": 154,
+    "price": "From ₹2.1L",
+    "priceValue": 2100000,
+    "description": "A premium studio led by visual artists crafting cinematic narratives with luxury styling.",
+    "services": [
+      "Luxury Weddings",
+      "Editorial Campaigns",
+      "Video Teasers"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 1 hr",
+    "availability": "Available this month",
+    "verified": true,
+    "match": 97,
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#F1E7DB] via-[#F9F2E8] to-[#FFFDF9]",
+    "review": "“Their cinematic approach elevated our entire wedding story.”"
+  },
+  {
+    "name": "Shree Praakaaram Caterers",
+    "category": "Catering",
+    "categoryLabel": "Premium Kerala & South Indian Catering",
+    "city": "Bengaluru",
+    "rating": 4.9,
+    "reviews": 256,
+    "price": "Starting ₹450 / Plate",
+    "priceValue": 450000,
+    "description": "Authentic Kerala and South Indian cuisine for weddings, receptions, housewarming ceremonies, corporate events and premium celebrations.",
+    "services": [
+      "Sadya",
+      "Live Counters",
+      "Traditional Desserts",
+      "Corporate Catering"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 30 mins",
+    "availability": "Available this week",
+    "verified": true,
+    "featured": true,
+    "match": 99,
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#F5EBD8] via-[#FAF0E1] to-[#FFFDF8]",
+    "review": "“Luxury tasting menus, impeccable service, and deeply memorable hospitality.”"
+  },
+  {
+    "name": "Rasa Curations",
+    "category": "Catering",
+    "city": "Jaipur",
+    "rating": 4.9,
+    "reviews": 143,
+    "price": "From ₹1.2L",
+    "priceValue": 1200000,
+    "description": "Multi-course banquet menus with bespoke culinary curation and refined hospitality for luxury events.",
+    "services": [
+      "Wedding Menus",
+      "Live Stations",
+      "Dessert Tables"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1514849302-984523450cf4?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 2 hrs",
+    "availability": "Available this month",
+    "verified": true,
+    "match": 95,
+    "image": "https://images.unsplash.com/photo-1514849302-984523450cf4?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EDE2D5] via-[#F7EEE0] to-[#FFFDFC]",
+    "review": "“Elegant presentation and a thoughtful culinary experience.”"
+  },
+  {
+    "name": "Elite Catering Co.",
+    "category": "Catering",
+    "city": "Mumbai",
+    "rating": 4.8,
+    "reviews": 117,
+    "price": "From ₹1.4L",
+    "priceValue": 1400000,
+    "description": "Signature international and regional menus crafted for elevated receptions and private dining evenings.",
+    "services": [
+      "Luxury Buffets",
+      "Canapés",
+      "Tea Service"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1460306855393-0410f61241c7?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1529042410759-befb1204b468?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Under 4 hrs",
+    "availability": "Available next month",
+    "verified": true,
+    "match": 92,
+    "image": "https://images.unsplash.com/photo-1460306855393-0410f61241c7?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EFE5D7] via-[#F8EFE2] to-[#FFFDFC]",
+    "review": "“Graceful service with beautifully executed menu stations.”"
+  },
+  {
+    "name": "Royal Orchid",
+    "category": "Venues",
+    "city": "Mumbai",
+    "rating": 4.9,
+    "reviews": 86,
+    "price": "From ₹6L",
+    "priceValue": 6000000,
+    "description": "A heritage-inspired venue pairing grand architecture, private lawns, and concierge-level event support.",
+    "services": [
+      "Banquet Hall",
+      "Garden Terrace",
+      "Luxury Suites"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Under 1 hr",
+    "availability": "Available this season",
+    "verified": true,
+    "match": 95,
+    "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EDE2D6] via-[#F6ECDD] to-[#FFFDF9]",
+    "review": "“A grand setting that feels both warm and polished.”"
+  },
+  {
+    "name": "The Leela",
+    "category": "Venues",
+    "city": "Bengaluru",
+    "rating": 5,
+    "reviews": 111,
+    "price": "From ₹8L",
+    "priceValue": 8000000,
+    "description": "Five-star ballrooms and terrace spaces designed for opulent weddings and executive galas.",
+    "services": [
+      "Grand Ballrooms",
+      "Rooftop Venues",
+      "Luxury Suites"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 45 mins",
+    "availability": "Limited dates left",
+    "verified": true,
+    "match": 98,
+    "image": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#F0E5D8] via-[#F8EFE3] to-[#FFFDF9]",
+    "review": "“The service level feels effortless even at grand scale.”"
+  },
+  {
+    "name": "JW Marriott",
+    "category": "Venues",
+    "city": "Goa",
+    "rating": 4.9,
+    "reviews": 77,
+    "price": "From ₹7.2L",
+    "priceValue": 7200000,
+    "description": "A coastal luxury venue with expansive lawns, refined catering, and full-service event management.",
+    "services": [
+      "Beachfront Events",
+      "Ballrooms",
+      "Guest Suites"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 1 hr",
+    "availability": "Available this season",
+    "verified": true,
+    "match": 94,
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EDE3D6] via-[#F7EBDD] to-[#FFFDF9]",
+    "review": "“A seamless luxury venue with brilliant coastal views.”"
+  },
+  {
+    "name": "Velvet & Bloom",
+    "category": "Florists",
+    "city": "Delhi NCR",
+    "rating": 4.8,
+    "reviews": 96,
+    "price": "From ₹2.4L",
+    "priceValue": 2400000,
+    "description": "Lavish floral installations, textural styling, and premium event transformations with sculptural details.",
+    "services": [
+      "Floral Design",
+      "Stage Styling",
+      "Entry Installations"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 2 hrs",
+    "availability": "Available this month",
+    "verified": true,
+    "match": 94,
+    "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#F2EBDF] via-[#FAF3E6] to-[#FFFDFC]",
+    "review": "“Every bloom feels composed and luxurious.”"
+  },
+  {
+    "name": "Golden Petals",
+    "category": "Florists",
+    "city": "Mumbai",
+    "rating": 4.7,
+    "reviews": 83,
+    "price": "From ₹1.9L",
+    "priceValue": 1900000,
+    "description": "Soft luxury decor for weddings and private dining, balancing timeless textures with warm metallic accents.",
+    "services": [
+      "Tablescapes",
+      "Lighting Layers",
+      "Signage Styling"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Under 3 hrs",
+    "availability": "Available next week",
+    "verified": true,
+    "match": 90,
+    "image": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EFE3D2] via-[#F7EBDF] to-[#FFFDFC]",
+    "review": "“A beautifully airy touch that made the space glow.”"
+  },
+  {
+    "name": "Bliss Decor",
+    "category": "Decor",
+    "city": "Bengaluru",
+    "rating": 4.8,
+    "reviews": 74,
+    "price": "From ₹2.1L",
+    "priceValue": 2100000,
+    "description": "Contemporary decor concepts with sculpted florals, statement backdrops, and editorial-style finishing.",
+    "services": [
+      "Backdrop Design",
+      "Venue Styling",
+      "Print Styling"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 4 hrs",
+    "availability": "Available this month",
+    "verified": true,
+    "match": 93,
+    "image": "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#F0E5DA] via-[#F7EEDC] to-[#FFFDFC]",
+    "review": "“Their styling choices feel effortlessly elevated.”"
+  },
+  {
+    "name": "Lumen Atelier",
+    "category": "Lighting",
+    "city": "Hyderabad",
+    "rating": 4.7,
+    "reviews": 71,
+    "price": "From ₹95K",
+    "priceValue": 950000,
+    "description": "Architectural lighting concepts that frame every moment in warmth, contrast, and refined drama.",
+    "services": [
+      "Stage Lighting",
+      "Mood Design",
+      "Gobo Projections"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 2 hrs",
+    "availability": "Available next week",
+    "verified": true,
+    "match": 92,
+    "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EEE3D3] via-[#F7EEDB] to-[#FFFDFC]",
+    "review": "“A thoughtful lighting team that turns spaces into mood.”"
+  },
+  {
+    "name": "Radiance Studio",
+    "category": "Lighting",
+    "city": "Bengaluru",
+    "rating": 4.8,
+    "reviews": 84,
+    "price": "From ₹1.1L",
+    "priceValue": 1100000,
+    "description": "Modern lighting design with custom fixtures and elegant scene-setting for evening receptions.",
+    "services": [
+      "Reception Lighting",
+      "Outdoor Glow",
+      "Theatrical Effects"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Under 4 hrs",
+    "availability": "Available this month",
+    "verified": true,
+    "match": 93,
+    "image": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EDE4D8] via-[#F6ECDC] to-[#FFFDF8]",
+    "review": "“Warm, cinematic lighting that feels highly custom.”"
+  },
+  {
+    "name": "Vinyl Republic",
+    "category": "DJ & Sound",
+    "city": "Goa",
+    "rating": 4.8,
+    "reviews": 89,
+    "price": "From ₹1.2L",
+    "priceValue": 1200000,
+    "description": "Immersive DJs and premium sound systems tailored for intimate evenings and high-energy receptions.",
+    "services": [
+      "Wedding DJ",
+      "Ceremony Sound",
+      "Live Mixing"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 2 hrs",
+    "availability": "Available this week",
+    "verified": true,
+    "match": 94,
+    "image": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EFE6DA] via-[#F7EEDB] to-[#FFFDFC]",
+    "review": "“The sound design made the evening feel unforgettable.”"
+  },
+  {
+    "name": "Bass House",
+    "category": "DJ & Sound",
+    "city": "Mumbai",
+    "rating": 4.7,
+    "reviews": 65,
+    "price": "From ₹90K",
+    "priceValue": 900000,
+    "description": "High-energy DJ experiences for modern receptions, rooftop nights, and curated party flows.",
+    "services": [
+      "Night Party Sets",
+      "Ceremony Music",
+      "LED Visuals"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 3 hrs",
+    "availability": "Available this month",
+    "verified": true,
+    "match": 91,
+    "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EDE2D4] via-[#F7ECDE] to-[#FFFDF9]",
+    "review": "“Energetic, polished, and perfectly tailored to the room.”"
+  },
+  {
+    "name": "Meridian Planners",
+    "category": "Planning",
+    "city": "Mumbai",
+    "rating": 4.9,
+    "reviews": 66,
+    "price": "From ₹3.5L",
+    "priceValue": 3500000,
+    "description": "Full-service event planning for design-forward celebrations with thoughtful guest experience management.",
+    "services": [
+      "Concept Planning",
+      "Vendor Coordination",
+      "Guest Experience"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 1 hr",
+    "availability": "Available this quarter",
+    "verified": true,
+    "match": 95,
+    "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EEE5D9] via-[#F7EEDF] to-[#FFFDFC]",
+    "review": "“Every timeline felt calm, clear, and impeccably managed.”"
+  },
+  {
+    "name": "Elite Events",
+    "category": "Planning",
+    "city": "Delhi NCR",
+    "rating": 4.8,
+    "reviews": 59,
+    "price": "From ₹2.9L",
+    "priceValue": 2900000,
+    "description": "Refined planning support for luxury parties, weddings, and milestone gatherings with flawless execution.",
+    "services": [
+      "Itinerary Planning",
+      "Vendor Management",
+      "On-site Coordination"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Under 3 hrs",
+    "availability": "Available next month",
+    "verified": true,
+    "match": 93,
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EDE3D7] via-[#F8EEE1] to-[#FFFDF8]",
+    "review": "“The expertise behind the scenes made the whole event feel seamless.”"
+  },
+  {
+    "name": "Sunrise Decor Co.",
+    "category": "Decor",
+    "city": "Jaipur",
+    "rating": 3.9,
+    "reviews": 42,
+    "price": "From ₹65K",
+    "priceValue": 650000,
+    "description": "Budget-friendly decor with a focus on clean setups, fresh florals, and functional styling for smaller gatherings.",
+    "services": [
+      "Basic Decor",
+      "Floral Arrangements",
+      "Table Settings"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 6 hrs",
+    "availability": "Available this week",
+    "verified": true,
+    "match": 78,
+    "image": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#F0E5DA] via-[#F7EEDC] to-[#FFFDFC]",
+    "review": "“Good value for intimate events with simple needs.”"
+  },
+  {
+    "name": "Click & Co. Photography",
+    "category": "Photography",
+    "city": "Hyderabad",
+    "rating": 4.3,
+    "reviews": 51,
+    "price": "From ₹85K",
+    "priceValue": 850000,
+    "description": "Emerging photography studio offering candid coverage and album design for mid-range events.",
+    "services": [
+      "Event Coverage",
+      "Album Design",
+      "Candid Shots"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Within 5 hrs",
+    "availability": "Available next month",
+    "verified": true,
+    "match": 82,
+    "image": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#EEE5DA] via-[#F7EEE2] to-[#FDF8F1]",
+    "review": "“Solid coverage at a fair price point.”"
+  },
+  {
+    "name": "Willow & Vine Decor",
+    "category": "Decor",
+    "city": "Bengaluru",
+    "rating": 4.8,
+    "reviews": 94,
+    "price": "From ₹1.1L",
+    "priceValue": 110000,
+    "description": "Botanical, textured decor design for weddings and milestone celebrations, blending fresh greenery with warm ambient lighting.",
+    "services": [
+      "Mandap Styling",
+      "Table Design",
+      "Entrance Installations"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Under 3 hrs",
+    "availability": "Open this month",
+    "verified": true,
+    "match": 93,
+    "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#F3ECE3] via-[#F8F1E7] to-[#FCFBF8]",
+    "review": "Every corner of the venue felt intentional and beautiful."
+  },
+  {
+    "name": "Saffron Table Catering",
+    "category": "Catering",
+    "city": "Bengaluru",
+    "rating": 4.7,
+    "reviews": 156,
+    "price": "From ₹950/plate",
+    "priceValue": 950,
+    "description": "Multi-cuisine wedding and corporate catering known for live counters and a polished, attentive service team.",
+    "services": [
+      "Live Counters",
+      "Multi-Cuisine Buffets",
+      "Corporate Catering",
+      "Dessert Bars"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Under 4 hrs",
+    "availability": "Open this month",
+    "verified": true,
+    "match": 91,
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#F3ECE3] via-[#F8F1E7] to-[#FCFBF8]",
+    "review": "Guests are still talking about the live chaat counter."
+  },
+  {
+    "name": "Pulse DJ Collective",
+    "category": "DJ & Sound",
+    "city": "Bengaluru",
+    "rating": 4.9,
+    "reviews": 112,
+    "price": "From ₹55,000",
+    "priceValue": 55000,
+    "description": "High-energy DJ sets and clean pro-audio setups for sangeets, receptions, and after-parties.",
+    "services": [
+      "Sangeet Sets",
+      "Reception DJ",
+      "Pro Sound Setup",
+      "MC Services"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Under 2 hrs",
+    "availability": "Open this month",
+    "verified": true,
+    "match": 95,
+    "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#F3ECE3] via-[#F8F1E7] to-[#FCFBF8]",
+    "review": "Kept the dance floor full from the first song to the last."
+  },
+  {
+    "name": "Petal & Stem Florists",
+    "category": "Florists",
+    "city": "Bengaluru",
+    "rating": 4.8,
+    "reviews": 87,
+    "price": "From ₹75,000",
+    "priceValue": 75000,
+    "description": "Seasonal, locally-sourced floral design for ceremonies, stages, and bridal bouquets.",
+    "services": [
+      "Bridal Bouquets",
+      "Stage Florals",
+      "Centerpieces"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Under 3 hrs",
+    "availability": "Booked for next 2 weeks",
+    "verified": true,
+    "match": 90,
+    "image": "https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#F3ECE3] via-[#F8F1E7] to-[#FCFBF8]",
+    "review": "The bridal bouquet was even better than the inspiration photo."
+  },
+  {
+    "name": "Clarity Event Planning",
+    "category": "Planning",
+    "city": "Bengaluru",
+    "rating": 4.9,
+    "reviews": 73,
+    "price": "From ₹1.5L",
+    "priceValue": 150000,
+    "description": "Full-service and day-of wedding planning with a calm, organized approach and a trusted vendor network.",
+    "services": [
+      "Full Planning",
+      "Day-of Coordination",
+      "Vendor Management",
+      "Budget Tracking"
+    ],
+    "gallery": [
+      "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=80"
+    ],
+    "responseTime": "Under 2 hrs",
+    "availability": "Open this month",
+    "verified": true,
+    "match": 97,
+    "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80",
+    "accent": "from-[#F3ECE3] via-[#F8F1E7] to-[#FCFBF8]",
+    "review": "Made a 400-guest wedding feel effortless for us."
+  }
+]

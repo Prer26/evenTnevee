@@ -1,0 +1,40 @@
+#env
+.env
+.env.*
+!.env.example
+!server/.env.example
+
+# Logs
+/logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+server/node_modules
+dist
+dist-ssr
+*.local
+
+# Local database (JSON file) — don't commit real user data
+server/data/db.json
+
+# User-uploaded vendor photos — not source, and can get large
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+.vite

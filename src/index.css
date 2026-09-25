@@ -1,0 +1,859 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+/* =========================================================
+   EVENTNEVE — BRAND SYSTEM
+   Warm Beige + Raspberry Wine + Charcoal + Soft Rose
+   ========================================================= */
+
+@layer base {
+  :root {
+    /* -------------------------------------------------------
+       CORE EVENTNEVE BRAND COLORS
+       ------------------------------------------------------- */
+
+    --eventneve-beige: #F3E7D3;
+    --eventneve-raspberry-wine: #7A2348;
+    --eventneve-charcoal: #292525;
+    --eventneve-soft-rose: #E8C7CF;
+
+    --eventneve-raspberry-wine-hover: #69213D;
+    --eventneve-ink-soft: #615A5A;
+
+
+    /* -------------------------------------------------------
+       SURFACE / TYPOGRAPHY TOKENS
+       ------------------------------------------------------- */
+
+    --ivory: #FFFDFB;
+    --beige: var(--eventneve-beige);
+    --cream: #FFF9F5;
+
+    --espresso: var(--eventneve-charcoal);
+    --taupe: var(--eventneve-ink-soft);
+
+
+    /* -------------------------------------------------------
+       IMPORTANT:
+       Champagne/Bronze now use Raspberry Wine.
+       
+       This means existing Home.jsx classes such as:
+       text-champagne
+       bg-champagne
+       text-bronze
+       bg-bronze
+       
+       automatically become Raspberry Wine.
+       ------------------------------------------------------- */
+
+    --champagne: var(--eventneve-raspberry-wine);
+    --bronze: var(--eventneve-raspberry-wine);
+
+
+    /* -------------------------------------------------------
+       SUPPORTING COLORS
+       ------------------------------------------------------- */
+
+    --sand: #F7EEE8;
+
+    --success: #5D8F6A;
+    --warning: #D1A867;
+    --error: #B85B64;
+
+
+    /* -------------------------------------------------------
+       SHADCN / UI TOKENS
+       ------------------------------------------------------- */
+
+    --background: var(--eventneve-beige);
+    --foreground: var(--eventneve-charcoal);
+
+    --card: #FFFDFB;
+    --card-foreground: var(--eventneve-charcoal);
+
+    --popover: #FFFDFB;
+    --popover-foreground: var(--eventneve-charcoal);
+
+
+    /* Primary = Raspberry Wine */
+    --primary: var(--eventneve-raspberry-wine);
+    --primary-foreground: #FFF9F5;
+
+
+    /* Secondary = subtle Soft Rose */
+    --secondary: var(--eventneve-soft-rose);
+    --secondary-foreground: var(--eventneve-charcoal);
+
+
+    /* Muted */
+    --muted: #F8EFE6;
+    --muted-foreground: #6D6362;
+
+
+    /* Accent remains subtle Soft Rose */
+    --accent: var(--eventneve-soft-rose);
+    --accent-foreground: var(--eventneve-charcoal);
+
+
+    /* Status */
+    --destructive: #B65F57;
+    --destructive-foreground: #FFFFFF;
+
+
+    /* Borders / Inputs */
+    --border: #E8D1D6;
+    --input: #F9F2ED;
+
+    /* Focus ring = Raspberry Wine */
+    --ring: var(--eventneve-raspberry-wine);
+
+
+    /* -------------------------------------------------------
+       CHART COLORS
+       ------------------------------------------------------- */
+
+    --chart-1: var(--eventneve-raspberry-wine);
+    --chart-2: #9B4167;
+    --chart-3: #6B5E60;
+    --chart-4: #8CA27D;
+    --chart-5: #D1A867;
+
+
+    /* -------------------------------------------------------
+       RADIUS
+       ------------------------------------------------------- */
+
+    --radius: 20px;
+
+
+    /* -------------------------------------------------------
+       TYPOGRAPHY
+       ------------------------------------------------------- */
+
+    --font-heading:
+      "Plus Jakarta Sans",
+      "Inter",
+      ui-sans-serif,
+      system-ui,
+      sans-serif;
+
+    --font-body:
+      "Plus Jakarta Sans",
+      "Inter",
+      ui-sans-serif,
+      system-ui,
+      sans-serif;
+
+    --font-display:
+      "Iowan Old Style",
+      "Palatino Linotype",
+      "Book Antiqua",
+      Georgia,
+      serif;
+
+    --font-mono:
+      ui-monospace,
+      SFMono-Regular,
+      Menlo,
+      Monaco,
+      Consolas,
+      "Liberation Mono",
+      "Courier New",
+      monospace;
+
+
+    /* -------------------------------------------------------
+       EVENTNEVE SHADOWS
+       ------------------------------------------------------- */
+
+    --shadow-soft:
+      0 1px 2px rgba(41, 37, 37, 0.06),
+      0 12px 28px rgba(41, 37, 37, 0.08);
+
+    --shadow-luxe:
+      0 18px 44px -22px rgba(122, 35, 72, 0.22),
+      0 10px 24px rgba(41, 37, 37, 0.08);
+
+    --shadow-float:
+      0 30px 80px -20px rgba(122, 35, 72, 0.18),
+      0 12px 30px rgba(41, 37, 37, 0.08);
+
+    --shadow-gold:
+      0 12px 32px -10px rgba(122, 35, 72, 0.28);
+
+
+    /* -------------------------------------------------------
+       SIDEBAR
+       ------------------------------------------------------- */
+
+    --sidebar-background: #FFFDFB;
+    --sidebar-foreground: var(--eventneve-charcoal);
+
+    --sidebar-primary: var(--eventneve-raspberry-wine);
+    --sidebar-primary-foreground: #FFFDFB;
+
+    --sidebar-accent: var(--eventneve-soft-rose);
+    --sidebar-accent-foreground: var(--eventneve-charcoal);
+
+    --sidebar-border: #E8D1D6;
+    --sidebar-ring: var(--eventneve-raspberry-wine);
+  }
+
+
+  /* =========================================================
+     DARK MODE
+     ========================================================= */
+
+  .dark {
+    /* =======================================================
+       RASPBERRY WINE DARK THEME
+       ======================================================= */
+
+    --eventneve-beige: #F3E7D3;
+
+    /* Keep the true Eventneve Raspberry Wine in dark mode */
+    --eventneve-raspberry-wine: #7A2348;
+
+    /* Light text values for dark/wine surfaces */
+    --eventneve-charcoal: #FFFDF8;
+    --eventneve-soft-rose: #E8C7CF;
+    --eventneve-ink-soft: #E8C7CF;
+
+
+    /* Main website surface = Raspberry Wine */
+    --background: #7A2348;
+    --foreground: #FFFDF8;
+
+    /* Cards sit one shade deeper so content remains readable */
+    --card: #641B3B;
+    --card-foreground: #FFFDF8;
+
+    --popover: #641B3B;
+    --popover-foreground: #FFFDF8;
+
+
+    /* Primary = Soft Rose on Raspberry Wine */
+    --primary: #E8C7CF;
+    --primary-foreground: #7A2348;
+
+
+    /* Secondary */
+    --secondary: rgba(232, 199, 207, 0.16);
+    --secondary-foreground: #FFFDF8;
+
+
+    /* Muted */
+    --muted: rgba(255, 253, 248, 0.08);
+    --muted-foreground: #E8C7CF;
+
+
+    /* Accent */
+    --accent: rgba(232, 199, 207, 0.20);
+    --accent-foreground: #FFFDF8;
+
+
+    /* Status */
+    --destructive: #CC7F7B;
+    --destructive-foreground: #FFFDFB;
+
+
+    /* Borders / Inputs */
+    --border: rgba(232, 199, 207, 0.28);
+    --input: rgba(255, 253, 248, 0.10);
+
+    --ring: #E8C7CF;
+
+
+    /* Dark / Wine shadows */
+    --shadow-soft:
+      0 1px 2px rgba(41, 37, 37, 0.30),
+      0 14px 28px rgba(41, 37, 37, 0.24);
+
+    --shadow-luxe:
+      0 18px 44px -22px rgba(41, 37, 37, 0.38),
+      0 10px 24px rgba(41, 37, 37, 0.24);
+
+    --shadow-float:
+      0 30px 80px -20px rgba(41, 37, 37, 0.48),
+      0 12px 30px rgba(41, 37, 37, 0.28);
+
+    --shadow-gold:
+      0 12px 32px -10px rgba(41, 37, 37, 0.32);
+
+
+    /* Sidebar */
+    --sidebar-background: #641B3B;
+    --sidebar-foreground: #FFFDF8;
+
+    --sidebar-primary: #E8C7CF;
+    --sidebar-primary-foreground: #7A2348;
+
+    --sidebar-accent: rgba(232, 199, 207, 0.16);
+    --sidebar-accent-foreground: #FFFDF8;
+
+    --sidebar-border: rgba(232, 199, 207, 0.28);
+    --sidebar-ring: #E8C7CF;
+  }
+}
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+@layer base {
+
+  * {
+    border-color: var(--border);
+
+    outline-color:
+      color-mix(
+        in oklab,
+        var(--ring) 50%,
+        transparent
+      );
+  }
+
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+
+    font-family: var(--font-body);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    text-rendering: optimizeLegibility;
+
+    font-feature-settings:
+      "ss01",
+      "cv11";
+  }
+
+
+  /* Display typography */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+
+  /* -------------------------------------------------------
+     TEXT SELECTION
+     ------------------------------------------------------- */
+
+  ::selection {
+    background: rgba(122, 35, 72, 0.18);
+    color: var(--eventneve-charcoal);
+  }
+
+
+  /* =======================================================
+     CUSTOM SCROLLBAR
+     ======================================================= */
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+
+  ::-webkit-scrollbar-track {
+    background: rgba(122, 35, 72, 0.08);
+  }
+
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(122, 35, 72, 0.52);
+
+    border-radius: 9999px;
+
+    border:
+      2px solid
+      rgba(243, 231, 211, 0.8);
+  }
+
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(122, 35, 72, 0.72);
+  }
+}
+
+
+/* =========================================================
+   COMPONENTS
+   ========================================================= */
+
+@layer components {
+
+  /* =======================================================
+     GLASS PANEL
+     ======================================================= */
+
+  .glass-panel {
+    background: rgba(255, 253, 251, 0.72);
+
+    backdrop-filter:
+      blur(20px)
+      saturate(120%);
+
+    border:
+      1px solid
+      rgba(122, 35, 72, 0.08);
+  }
+
+
+  .dark .glass-panel {
+    background: rgba(100, 27, 59, 0.88);
+
+    border:
+      1px solid
+      rgba(232, 199, 207, 0.2);
+  }
+
+
+  /* =======================================================
+     GLASS NAVIGATION
+     ======================================================= */
+
+  .glass-nav {
+    background: rgba(255, 253, 251, 0.82);
+
+    backdrop-filter:
+      blur(24px)
+      saturate(140%);
+
+    border:
+      1px solid
+      rgba(122, 35, 72, 0.08);
+  }
+
+
+  .dark .glass-nav {
+    background: rgba(100, 27, 59, 0.90);
+
+    border:
+      1px solid
+      rgba(232, 199, 207, 0.24);
+  }
+
+
+  /* =======================================================
+     EVENTNEVE BRAND GRADIENT
+     
+     Raspberry Wine → Deep Raspberry
+     NOT Raspberry → Light Rose
+     ======================================================= */
+
+  .text-gold-gradient {
+    background:
+      linear-gradient(
+        135deg,
+        #7A2348 0%,
+        #9B4167 100%
+      );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+  }
+
+
+  /* =======================================================
+     EVENTNEVE CUSTOM CURSOR
+     ======================================================= */
+
+  .eventneve-cursor {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 0;
+    height: 0;
+
+    pointer-events: none;
+
+    z-index: 99999;
+
+    transform:
+      translate(-50%, -50%);
+
+    transition:
+      opacity 0.2s ease;
+  }
+
+
+  .eventneve-cursor__ring,
+  .eventneve-cursor__dot {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    border-radius: 9999px;
+
+    transform:
+      translate(-50%, -50%);
+  }
+
+
+  /* Cursor ring */
+
+  .eventneve-cursor__ring {
+    width: 30px;
+    height: 30px;
+
+    border:
+      1px solid
+      rgba(122, 35, 72, 0.45);
+
+    background:
+      rgba(232, 199, 207, 0.2);
+
+    transition:
+      width 0.18s ease,
+      height 0.18s ease,
+      border-color 0.18s ease,
+      background 0.18s ease;
+  }
+
+
+  /* Cursor dot */
+
+  .eventneve-cursor__dot {
+    width: 8px;
+    height: 8px;
+
+    background:
+      var(--eventneve-raspberry-wine);
+
+    box-shadow:
+      0 0 0 3px
+      rgba(122, 35, 72, 0.08);
+
+    transition:
+      width 0.18s ease,
+      height 0.18s ease,
+      background 0.18s ease,
+      box-shadow 0.18s ease;
+  }
+
+
+  /* =======================================================
+     ACTIVE CURSOR
+     ======================================================= */
+
+  .eventneve-cursor-enabled {
+    cursor: none;
+  }
+
+
+  .eventneve-cursor-enabled
+  .eventneve-cursor__ring {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  .eventneve-cursor-enabled
+  .eventneve-cursor__dot {
+    width: 10px;
+    height: 10px;
+
+    background:
+      var(--eventneve-raspberry-wine);
+  }
+
+
+  /* =======================================================
+     CURSOR HOVER
+     ======================================================= */
+
+  .eventneve-cursor-hover
+  .eventneve-cursor__ring {
+    width: 42px;
+    height: 42px;
+
+    background:
+      rgba(232, 199, 207, 0.3);
+
+    border-color:
+      rgba(122, 35, 72, 0.72);
+  }
+
+
+  .eventneve-cursor-hover
+  .eventneve-cursor__dot {
+    width: 12px;
+    height: 12px;
+
+    background:
+      var(--eventneve-raspberry-wine);
+
+    box-shadow:
+      0 0 0 5px
+      rgba(122, 35, 72, 0.12);
+  }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   ========================================================= */
+
+@media (pointer: coarse), (hover: none) {
+
+  .eventneve-cursor {
+    display: none !important;
+  }
+
+  .eventneve-cursor-enabled {
+    cursor: auto;
+  }
+}
+
+
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+
+@layer utilities {
+
+  /* -------------------------------------------------------
+     SHADOWS
+     ------------------------------------------------------- */
+
+  .shadow-soft {
+    box-shadow:
+      var(--shadow-soft);
+  }
+
+
+  .shadow-luxe {
+    box-shadow:
+      var(--shadow-luxe);
+  }
+
+
+  .shadow-float {
+    box-shadow:
+      var(--shadow-float);
+  }
+
+
+  .shadow-gold {
+    box-shadow:
+      var(--shadow-gold);
+  }
+
+
+  /* -------------------------------------------------------
+     HOVER LIFT
+     ------------------------------------------------------- */
+
+  .hover-lift {
+    transition:
+      transform 0.4s
+      cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 0.4s ease;
+  }
+
+
+  .hover-lift:hover {
+    transform:
+      translateY(-4px);
+
+    box-shadow:
+      var(--shadow-float);
+  }
+
+
+  /* -------------------------------------------------------
+     ANIMATIONS
+     ------------------------------------------------------- */
+
+  .animate-orbit-slow {
+    animation:
+      orbit 40s linear infinite;
+  }
+
+
+  .animate-orbit-med {
+    animation:
+      orbit 28s linear infinite;
+  }
+
+
+  .animate-orbit-reverse {
+    animation:
+      orbit-reverse 55s linear infinite;
+  }
+
+
+  .animate-float-soft {
+    animation:
+      float-soft 6s ease-in-out infinite;
+  }
+
+
+  .animate-reveal {
+    animation:
+      reveal-up
+      0.9s
+      cubic-bezier(0.2, 0.8, 0.2, 1)
+      both;
+  }
+
+
+  .animate-pulse-ring {
+    animation:
+      pulse-ring
+      3s
+      ease-out
+      infinite;
+  }
+
+
+  .animate-line-pulse {
+    animation:
+      line-pulse
+      4.5s
+      ease-in-out
+      infinite;
+
+    stroke-dasharray:
+      8 10;
+  }
+}
+
+
+/* =========================================================
+   KEYFRAMES
+   ========================================================= */
+
+@keyframes orbit {
+
+  from {
+    transform:
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+}
+
+
+@keyframes orbit-reverse {
+
+  from {
+    transform:
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      rotate(-360deg);
+  }
+}
+
+
+@keyframes float-soft {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      translateX(0);
+  }
+
+  50% {
+    transform:
+      translateY(-10px)
+      translateX(4px);
+  }
+}
+
+
+@keyframes reveal-up {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes shimmer {
+
+  0% {
+    background-position:
+      -200% 0;
+  }
+
+  100% {
+    background-position:
+      200% 0;
+  }
+}
+
+
+@keyframes pulse-ring {
+
+  0% {
+    transform:
+      scale(0.9);
+
+    opacity: 0.6;
+  }
+
+  100% {
+    transform:
+      scale(1.4);
+
+    opacity: 0;
+  }
+}
+
+
+@keyframes line-pulse {
+
+  0%,
+  100% {
+    opacity: 0.25;
+
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    opacity: 1;
+
+    stroke-dashoffset: -10;
+  }
+}
