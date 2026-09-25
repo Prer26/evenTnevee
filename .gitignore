@@ -19,8 +19,10 @@ dist
 dist-ssr
 *.local
 
-# Local database (JSON file) — don't commit real user data
+# Local database (JSON/SQLite files) — don't commit real user data
 server/data/db.json
+*.db
+server/prisma/*.db
 
 # User-uploaded vendor photos — not source, and can get large
 server/uploads/*

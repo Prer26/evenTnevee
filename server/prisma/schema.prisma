@@ -3,29 +3,28 @@ generator client {
 }
 
 datasource db {
-  provider  = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
 model User {
-  id                  String          @id @db.VarChar(255)
-  email               String          @unique @db.VarChar(255)
+  id                  String          @id
+  email               String          @unique
   passwordHash        String          @map("password_hash")
-  fullName            String?         @map("full_name") @db.VarChar(255)
-  role                String          @default("user") @db.VarChar(50)
-  accountType         String          @default("event_planner") @map("account_type") @db.VarChar(50)
-  companyName         String?         @map("company_name") @db.VarChar(255)
+  fullName            String?         @map("full_name")
+  role                String          @default("user")
+  accountType         String          @default("event_planner") @map("account_type")
+  companyName         String?         @map("company_name")
   emailVerified       Boolean         @default(false) @map("email_verified")
-  otp                 String?         @db.VarChar(255)
+  otp                 String?
   otpExpires          BigInt?         @map("otp_expires")
   otpAttempts         Int             @default(0) @map("otp_attempts")
   failedLoginAttempts Int             @default(0) @map("failed_login_attempts")
   lockoutUntil        BigInt          @default(0) @map("lockout_until")
-  resetToken          String?         @map("reset_token") @db.VarChar(255)
+  resetToken          String?         @map("reset_token")
   resetTokenExpires   BigInt?         @map("reset_token_expires")
   tokenVersion        Int             @default(0) @map("token_version")
-  createdAt           DateTime        @default(now()) @map("created_at") @db.Timestamptz(6)
+  createdAt           DateTime        @default(now()) @map("created_at")
   companyProfile      CompanyProfile?
   subscription        Subscription?
   vendor              Vendor?
@@ -35,58 +34,58 @@ model User {
 }
 
 model CompanyProfile {
-  id String @id @db.VarChar(255)
+  id String @id
 
-  userId String @unique @map("user_id") @db.VarChar(255)
-  email  String @db.VarChar(255)
+  userId String @unique @map("user_id")
+  email  String
 
-  fullName    String @map("full_name") @db.VarChar(255)
-  companyName String @map("company_name") @db.VarChar(255)
-  industry    String @db.VarChar(150)
-  location    String @db.VarChar(255)
+  fullName    String @map("full_name")
+  companyName String @map("company_name")
+  industry    String
+  location    String
 
-  businessEmail            String @map("business_email") @db.VarChar(255)
-  businessPhoneCountryCode String @map("business_phone_country_code") @db.VarChar(10)
-  businessPhoneNumber      String @map("business_phone_number") @db.VarChar(30)
+  businessEmail            String @map("business_email")
+  businessPhoneCountryCode String @map("business_phone_country_code")
+  businessPhoneNumber      String @map("business_phone_number")
 
-  website     String? @db.VarChar(500)
+  website     String?
   foundedYear Int?    @map("founded_year")
-  companySize String? @map("company_size") @db.VarChar(100)
+  companySize String? @map("company_size")
 
-  aboutCompany String @map("about_company")
-  companyType  String @map("company_type") @db.VarChar(100)
+  aboutCompany String
+  companyType  String @map("company_type")
 
-  companyLinkedin String? @map("company_linkedin") @db.VarChar(500)
-  instagram       String? @db.VarChar(500)
+  companyLinkedin String? @map("company_linkedin")
+  instagram       String?
 
-  services Json @default("[]")
+  services String @default("[]")
 
   logoUrl  String? @map("logo_url")
-  logoCrop Json    @default("{}") @map("logo_crop")
+  logoCrop String  @default("{}") @map("logo_crop")
 
   bannerUrl  String? @map("banner_url")
-  bannerCrop Json    @default("{}") @map("banner_crop")
+  bannerCrop String  @default("{}") @map("banner_crop")
 
-  founderName  String? @map("founder_name") @db.VarChar(255)
-  founderTitle String? @map("founder_title") @db.VarChar(255)
-  founderEmail String? @map("founder_email") @db.VarChar(255)
+  founderName  String? @map("founder_name")
+  founderTitle String? @map("founder_title")
+  founderEmail String? @map("founder_email")
 
-  founderPhoneCountryCode String? @map("founder_phone_country_code") @db.VarChar(10)
-  founderPhoneNumber      String? @map("founder_phone_number") @db.VarChar(30)
+  founderPhoneCountryCode String? @map("founder_phone_country_code")
+  founderPhoneNumber      String? @map("founder_phone_number")
 
-  founderLinkedin String? @map("founder_linkedin") @db.VarChar(500)
-  founderBio      String? @map("founder_bio")
+  founderLinkedin String? @map("founder_linkedin")
+  founderBio      String?
 
   founderPhotoUrl  String? @map("founder_photo_url")
-  founderPhotoCrop Json    @default("{}") @map("founder_photo_crop")
+  founderPhotoCrop String  @default("{}") @map("founder_photo_crop")
 
-  teamMembers Json @default("[]") @map("team_members")
+  teamMembers String @default("[]") @map("team_members")
 
   profileCompletion Int     @default(0) @map("profile_completion")
   isVerified        Boolean @default(false) @map("is_verified")
 
-  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -97,31 +96,31 @@ model CompanyProfile {
 }
 
 model Vendor {
-  id               String   @id @db.VarChar(255)
-  userId           String?  @unique @map("user_id") @db.VarChar(255)
-  name             String   @db.VarChar(255)
-  category         String?  @db.VarChar(100)
-  city             String?  @db.VarChar(100)
-  rating           Decimal  @default(5.0) @db.Decimal(3, 2)
+  id               String   @id
+  userId           String?  @unique @map("user_id")
+  name             String
+  category         String?
+  city             String?
+  rating           Float    @default(5.0)
   reviews          Int      @default(0)
-  price            String?  @db.VarChar(100)
-  priceValue       Decimal  @default(0) @map("price_value") @db.Decimal(12, 2)
+  price            String?
+  priceValue       Float    @default(0) @map("price_value")
   description      String?
-  services         Json     @default("[]")
-  serviceOfferings Json     @default("[]") @map("service_offerings")
-  gallery          Json     @default("[]")
-  contact          Json     @default("{}")
-  responseTime     String?  @map("response_time") @db.VarChar(100)
-  availability     String?  @db.VarChar(100)
+  services         String   @default("[]")
+  serviceOfferings String   @default("[]") @map("service_offerings")
+  gallery          String   @default("[]")
+  contact          String   @default("{}")
+  responseTime     String?  @map("response_time")
+  availability     String?
   verified         Boolean  @default(false)
   isAvailable      Boolean  @default(true) @map("is_available")
   match            Int      @default(90)
   image            String?
-  accent           String?  @db.VarChar(255)
+  accent           String?
   review           String?
-  blockedDates     Json     @default("[]") @map("blocked_dates")
-  commissionRate   Decimal  @default(8.0) @map("commission_rate") @db.Decimal(5, 2)
-  createdAt        DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  blockedDates     String   @default("[]") @map("blocked_dates")
+  commissionRate   Float    @default(8.0) @map("commission_rate")
+  createdAt        DateTime @default(now()) @map("created_at")
   user             User?    @relation(fields: [userId], references: [id])
 
   @@index([category])
@@ -132,28 +131,28 @@ model Vendor {
 }
 
 model Booking {
-  id               String    @id @db.VarChar(255)
-  vendorId         String    @map("vendor_id") @db.VarChar(255)
-  vendorName       String?   @map("vendor_name") @db.VarChar(255)
-  category         String?   @db.VarChar(100)
-  city             String?   @db.VarChar(100)
-  userId           String?   @map("user_id") @db.VarChar(255)
-  clientName       String?   @map("client_name") @db.VarChar(255)
-  clientEmail      String?   @map("client_email") @db.VarChar(255)
-  clientPhone      String?   @map("client_phone") @db.VarChar(255)
-  plannerName      String?   @map("planner_name") @db.VarChar(255)
-  plannerEmail     String?   @map("planner_email") @db.VarChar(255)
-  plannerPhone     String?   @map("planner_phone") @db.VarChar(255)
-  eventType        String?   @map("event_type") @db.VarChar(255)
-  eventDate        DateTime? @map("event_date") @db.Timestamptz(6)
+  id               String    @id
+  vendorId         String    @map("vendor_id")
+  vendorName       String?   @map("vendor_name")
+  category         String?
+  city             String?
+  userId           String?   @map("user_id")
+  clientName       String?   @map("client_name")
+  clientEmail      String?   @map("client_email")
+  clientPhone      String?   @map("client_phone")
+  plannerName      String?   @map("planner_name")
+  plannerEmail     String?   @map("planner_email")
+  plannerPhone     String?   @map("planner_phone")
+  eventType        String?   @map("event_type")
+  eventDate        DateTime? @map("event_date")
   guestCount       Int       @default(0) @map("guest_count")
-  budget           String?   @db.VarChar(100)
-  status           String    @default("Pending") @db.VarChar(50)
-  paidAmount       Decimal   @default(0) @map("paid_amount") @db.Decimal(12, 2)
-  commissionAmount Decimal   @default(0) @map("commission_amount") @db.Decimal(12, 2)
-  commissionStatus String    @default("none") @map("commission_status") @db.VarChar(50)
+  budget           String?
+  status           String    @default("Pending")
+  paidAmount       Float     @default(0) @map("paid_amount")
+  commissionAmount Float     @default(0) @map("commission_amount")
+  commissionStatus String    @default("none") @map("commission_status")
   notes            String?
-  createdAt        DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  createdAt        DateTime  @default(now()) @map("created_at")
 
   @@index([vendorId])
   @@index([userId])
@@ -163,39 +162,39 @@ model Booking {
 }
 
 model Inquiry {
-  id        String   @id @db.VarChar(255)
-  vendorId  String?  @map("vendor_id") @db.VarChar(255)
-  userId    String?  @map("user_id") @db.VarChar(255)
-  name      String?  @db.VarChar(255)
-  email     String?  @db.VarChar(255)
-  phone     String?  @db.VarChar(255)
+  id        String   @id
+  vendorId  String?  @map("vendor_id")
+  userId    String?  @map("user_id")
+  name      String?
+  email     String?
+  phone     String?
   message   String?
-  eventType String?  @map("event_type") @db.VarChar(100)
-  status    String   @default("New") @db.VarChar(50)
-  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  eventType String?  @map("event_type")
+  status    String   @default("New")
+  createdAt DateTime @default(now()) @map("created_at")
 
   @@index([status])
   @@map("inquiries")
 }
 
 model Transaction {
-  id                String    @id @db.VarChar(255)
-  userId            String    @map("user_id") @db.VarChar(255)
-  vendorId          String?   @map("vendor_id") @db.VarChar(255)
-  vendor            String?   @db.VarChar(255)
-  amount            Decimal   @db.Decimal(12, 2)
-  type              String    @default("expense") @db.VarChar(50)
-  category          String?   @db.VarChar(100)
+  id                String    @id
+  userId            String    @map("user_id")
+  vendorId          String?   @map("vendor_id")
+  vendor            String?
+  amount            Float
+  type              String    @default("expense")
+  category          String?
   description       String?
   notes             String?
-  date              DateTime  @default(now()) @db.Timestamptz(6)
-  dueDate           DateTime? @map("due_date") @db.Timestamptz(6)
-  status            String    @default("Pending") @db.VarChar(50)
-  invoice           String?   @db.VarChar(100)
-  method            String?   @db.VarChar(50)
-  razorpayOrderId   String?   @map("razorpay_order_id") @db.VarChar(255)
-  razorpayPaymentId String?   @map("razorpay_payment_id") @db.VarChar(255)
-  createdAt         DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  date              DateTime  @default(now())
+  dueDate           DateTime? @map("due_date")
+  status            String    @default("Pending")
+  invoice           String?
+  method            String?
+  razorpayOrderId   String?   @map("razorpay_order_id")
+  razorpayPaymentId String?   @map("razorpay_payment_id")
+  createdAt         DateTime  @default(now()) @map("created_at")
 
   @@index([userId])
   @@index([userId, status])
@@ -204,14 +203,14 @@ model Transaction {
 }
 
 model Message {
-  id         String   @id @db.VarChar(255)
-  vendorId   String   @map("vendor_id") @db.VarChar(255)
-  vendorName String?  @map("vendor_name") @db.VarChar(255)
-  userId     String   @map("user_id") @db.VarChar(255)
-  userName   String?  @map("user_name") @db.VarChar(255)
-  sender     String   @db.VarChar(50)
+  id         String   @id
+  vendorId   String   @map("vendor_id")
+  vendorName String?  @map("vendor_name")
+  userId     String   @map("user_id")
+  userName   String?  @map("user_name")
+  sender     String
   body       String
-  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  createdAt  DateTime @default(now()) @map("created_at")
 
   @@index([vendorId, userId])
   @@index([userId])
@@ -220,32 +219,32 @@ model Message {
 }
 
 model Review {
-  id          String   @id @db.VarChar(255)
-  bookingId   String   @unique @map("booking_id") @db.VarChar(255)
-  vendorId    String   @map("vendor_id") @db.VarChar(255)
-  userId      String   @map("user_id") @db.VarChar(255)
-  plannerName String?  @map("planner_name") @db.VarChar(255)
-  rating      Decimal  @db.Decimal(3, 2)
+  id          String   @id
+  bookingId   String   @unique @map("booking_id")
+  vendorId    String   @map("vendor_id")
+  userId      String   @map("user_id")
+  plannerName String?  @map("planner_name")
+  rating      Float
   comment     String?
-  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  createdAt   DateTime @default(now()) @map("created_at")
 
   @@index([vendorId])
   @@map("reviews")
 }
 
 model Subscription {
-  id             String    @id @db.VarChar(255)
-  userId         String    @unique @map("user_id") @db.VarChar(255)
-  plan           String    @default("FREE") @db.VarChar(50)
-  status         String    @default("ACTIVE") @db.VarChar(50)
-  amount         Decimal   @default(0) @db.Decimal(12, 2)
+  id             String    @id
+  userId         String    @unique @map("user_id")
+  plan           String    @default("FREE")
+  status         String    @default("ACTIVE")
+  amount         Float     @default(0)
   quota          Int       @default(0)
   usedUnlocks    Int       @default(0) @map("used_unlocks")
-  startDate      DateTime  @default(now()) @map("start_date") @db.Timestamptz(6)
-  expiryDate     DateTime? @map("expiry_date") @db.Timestamptz(6)
-  orderReference String?   @map("order_reference") @db.VarChar(255)
-  createdAt      DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt      DateTime  @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(6)
+  startDate      DateTime  @default(now()) @map("start_date")
+  expiryDate     DateTime? @map("expiry_date")
+  orderReference String?   @map("order_reference")
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @default(now()) @updatedAt @map("updated_at")
   user           User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
@@ -254,11 +253,11 @@ model Subscription {
 }
 
 model VendorUnlock {
-  id             String   @id @db.VarChar(255)
-  userId         String   @map("user_id") @db.VarChar(255)
-  vendorId       String   @map("vendor_id") @db.VarChar(255)
-  subscriptionId String?  @map("subscription_id") @db.VarChar(255)
-  unlockedAt     DateTime @default(now()) @map("unlocked_at") @db.Timestamptz(6)
+  id             String   @id
+  userId         String   @map("user_id")
+  vendorId       String   @map("vendor_id")
+  subscriptionId String?  @map("subscription_id")
+  unlockedAt     DateTime @default(now()) @map("unlocked_at")
 
   @@unique([userId, vendorId])
   @@index([userId])
@@ -267,15 +266,15 @@ model VendorUnlock {
 }
 
 model PaymentEvent {
-  id        String   @id @db.VarChar(255)
-  eventId   String   @unique @map("event_id") @db.VarChar(255)
-  eventType String   @map("event_type") @db.VarChar(100)
-  orderId   String?  @map("order_id") @db.VarChar(255)
-  paymentId String?  @map("payment_id") @db.VarChar(255)
-  userId    String?  @map("user_id") @db.VarChar(255)
-  status    String   @default("processed") @db.VarChar(50)
-  payload   Json?    @default("{}")
-  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  id        String   @id
+  eventId   String   @unique @map("event_id")
+  eventType String   @map("event_type")
+  orderId   String?  @map("order_id")
+  paymentId String?  @map("payment_id")
+  userId    String?  @map("user_id")
+  status    String   @default("processed")
+  payload   String?  @default("{}")
+  createdAt DateTime @default(now()) @map("created_at")
 
   @@index([orderId])
   @@index([paymentId])

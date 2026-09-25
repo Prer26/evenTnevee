@@ -26,6 +26,7 @@ import Register from '@/pages/Register';
 import ForgotPassword from '@/pages/ForgotPassword';
 import ResetPassword from '@/pages/ResetPassword';
 import Messages from '@/pages/Messages';
+import CustomerServices from '@/pages/CustomerServices';
 
 function App() {
   useEffect(() => {
@@ -93,6 +94,7 @@ function App() {
                   <Route path="/pricing" element={<Pricing />} />
                 </Route>
                 <Route path="/about" element={<About />} />
+                <Route path="/customer-services" element={<CustomerServices />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/features" element={<Features />} />
 

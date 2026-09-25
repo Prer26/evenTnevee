@@ -6,6 +6,7 @@ import { useTheme } from "@/lib/ThemeContext";
 
 const links = [
   { to: "/", label: "Home" },
+  { to: "/customer-services", label: "Customer Hub" },
   { to: "/marketplace", label: "Marketplace" },
   { to: "/features", label: "Features" },
   { to: "/financial-tracker", label: "Financial Tracker" },

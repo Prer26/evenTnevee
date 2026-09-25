@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -205,99 +205,220 @@
 
 
   /* =========================================================
-     DARK MODE
+     DARK MODE — LUXURIOUS RASPBERRY WINE THEME
+     Warm deep burgundy-raspberry charcoal surfaces (not pitch black)
      ========================================================= */
 
-  .dark {
-    /* =======================================================
-       RASPBERRY WINE DARK THEME
-       ======================================================= */
+  [data-theme="dark"], .dark {
+    --color-bg:            #22121A;   /* Page background — warm deep raspberry dark */
+    --color-bg-surface:    #301A25;   /* Cards, stat cards, main containers */
+    --color-bg-elevated:   #3C2130;   /* Modals, dropdowns, nested panels */
+    --color-primary:       #C4547A;   /* Raspberry Rose for dark bg contrast */
+    --color-primary-dark:  #8E2948;   /* Hover state in dark mode */
+    --color-primary-light: #E8C7CF;   /* Soft pink for secondary actions */
+    --color-text:          #F7EFF3;   /* Warm off-white text */
+    --color-text-muted:    #C7AFB8;   /* Muted rose text, placeholders */
+    --color-accent:        #C4547A;   /* Raspberry accent */
+    --color-border:        #592D44;   /* Dark raspberry-tinted border */
+    --color-white:         #301A25;   /* "White" surfaces in dark = #301A25 */
+    --color-success:       #5A9E72;   /* Green status */
+    --color-error:         #E05A4A;   /* Red status */
+    --color-warning:       #D4944A;   /* Amber status */
+    --color-dark:          #301A25;
 
-    --eventneve-beige: #F3E7D3;
+    --eventneve-beige: #301A25;
+    --eventneve-raspberry-wine: #C4547A;
+    --eventneve-charcoal: #F7EFF3;
+    --eventneve-soft-rose: #C4547A;
+    --eventneve-raspberry-wine-hover: #8E2948;
+    --eventneve-ink-soft: #C7AFB8;
 
-    /* Keep the true Eventneve Raspberry Wine in dark mode */
-    --eventneve-raspberry-wine: #7A2348;
+    --background: #22121A;
+    --foreground: #F7EFF3;
 
-    /* Light text values for dark/wine surfaces */
-    --eventneve-charcoal: #FFFDF8;
-    --eventneve-soft-rose: #E8C7CF;
-    --eventneve-ink-soft: #E8C7CF;
+    --card: #301A25;
+    --card-foreground: #F7EFF3;
 
+    --popover: #3C2130;
+    --popover-foreground: #F7EFF3;
 
-    /* Main website surface = Raspberry Wine */
-    --background: #7A2348;
-    --foreground: #FFFDF8;
+    --primary: #C4547A;
+    --primary-foreground: #FFFFFF;
 
-    /* Cards sit one shade deeper so content remains readable */
-    --card: #641B3B;
-    --card-foreground: #FFFDF8;
+    --secondary: #4A2535;
+    --secondary-foreground: #F7EFF3;
 
-    --popover: #641B3B;
-    --popover-foreground: #FFFDF8;
+    --muted: #3C2130;
+    --muted-foreground: #C7AFB8;
 
+    --accent: #C4547A;
+    --accent-foreground: #FFFFFF;
 
-    /* Primary = Soft Rose on Raspberry Wine */
-    --primary: #E8C7CF;
-    --primary-foreground: #7A2348;
+    --destructive: #E05A4A;
+    --destructive-foreground: #FFFFFF;
 
+    --border: #592D44;
+    --input: #22121A;
+    --ring: #C4547A;
 
-    /* Secondary */
-    --secondary: rgba(232, 199, 207, 0.16);
-    --secondary-foreground: #FFFDF8;
+    --ivory: #22121A;
+    --beige: #301A25;
+    --cream: #301A25;
+    --espresso: #F7EFF3;
+    --taupe: #C7AFB8;
+    --champagne: #C4547A;
+    --bronze: #8E2948;
+    --sand: #592D44;
 
+    --shadow-soft: 0 1px 3px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.6);
+    --shadow-luxe: 0 2px 6px rgba(0,0,0,0.6), 0 20px 50px -12px rgba(0,0,0,0.8);
+    --shadow-float: 0 30px 80px -20px rgba(0,0,0,0.9), 0 8px 24px rgba(0,0,0,0.7);
+    --shadow-gold: 0 12px 40px -10px rgba(196,84,122,0.3);
 
-    /* Muted */
-    --muted: rgba(255, 253, 248, 0.08);
-    --muted-foreground: #E8C7CF;
-
-
-    /* Accent */
-    --accent: rgba(232, 199, 207, 0.20);
-    --accent-foreground: #FFFDF8;
-
-
-    /* Status */
-    --destructive: #CC7F7B;
-    --destructive-foreground: #FFFDFB;
-
-
-    /* Borders / Inputs */
-    --border: rgba(232, 199, 207, 0.28);
-    --input: rgba(255, 253, 248, 0.10);
-
-    --ring: #E8C7CF;
-
-
-    /* Dark / Wine shadows */
-    --shadow-soft:
-      0 1px 2px rgba(41, 37, 37, 0.30),
-      0 14px 28px rgba(41, 37, 37, 0.24);
-
-    --shadow-luxe:
-      0 18px 44px -22px rgba(41, 37, 37, 0.38),
-      0 10px 24px rgba(41, 37, 37, 0.24);
-
-    --shadow-float:
-      0 30px 80px -20px rgba(41, 37, 37, 0.48),
-      0 12px 30px rgba(41, 37, 37, 0.28);
-
-    --shadow-gold:
-      0 12px 32px -10px rgba(41, 37, 37, 0.32);
-
-
-    /* Sidebar */
-    --sidebar-background: #641B3B;
-    --sidebar-foreground: #FFFDF8;
-
-    --sidebar-primary: #E8C7CF;
-    --sidebar-primary-foreground: #7A2348;
-
-    --sidebar-accent: rgba(232, 199, 207, 0.16);
-    --sidebar-accent-foreground: #FFFDF8;
-
-    --sidebar-border: rgba(232, 199, 207, 0.28);
-    --sidebar-ring: #E8C7CF;
+    --sidebar-background: #301A25;
+    --sidebar-foreground: #F7EFF3;
+    --sidebar-primary: #C4547A;
+    --sidebar-primary-foreground: #FFFFFF;
+    --sidebar-accent: #3C2130;
+    --sidebar-accent-foreground: #F7EFF3;
+    --sidebar-border: #592D44;
+    --sidebar-ring: #C4547A;
   }
+}
+
+
+/* =========================================================
+   COMPREHENSIVE DARK MODE SURFACE & ELEMENT OVERRIDES
+   Ensures ALL cards, containers, panels, tags, inputs, and elements
+   switch from beige/white/light to warm Raspberry Wine dark surfaces.
+   ========================================================= */
+
+[data-theme="dark"] body,
+.dark body {
+  background-color: #22121A !important;
+  color: #F7EFF3 !important;
+}
+
+/* Page background overrides */
+[data-theme="dark"] .bg-background,
+.dark .bg-background,
+[data-theme="dark"] .bg-ivory,
+.dark .bg-ivory {
+  background-color: #22121A !important;
+}
+
+/* Card & Surface overrides */
+[data-theme="dark"] .bg-card,
+.dark .bg-card,
+[data-theme="dark"] .bg-white,
+.dark .bg-white,
+[data-theme="dark"] .bg-\[\#FFFDF8\],
+.dark .bg-\[\#FFFDF8\],
+[data-theme="dark"] .bg-\[\#FFFDFB\],
+.dark .bg-\[\#FFFDFB\],
+[data-theme="dark"] .bg-\[\#F3E7D3\],
+.dark .bg-\[\#F3E7D3\],
+[data-theme="dark"] .bg-\[\#F9F6F0\],
+.dark .bg-\[\#F9F6F0\],
+[data-theme="dark"] .bg-beige,
+.dark .bg-beige,
+[data-theme="dark"] .bg-cream,
+.dark .bg-cream,
+[data-theme="dark"] .glass-panel,
+.dark .glass-panel,
+[data-theme="dark"] .glass-nav,
+.dark .glass-nav {
+  background-color: #301A25 !important;
+  color: #F7EFF3 !important;
+  border-color: #592D44 !important;
+}
+
+/* Nested panels, elevated stat boxes, chips, tags, pills, inner cards */
+[data-theme="dark"] .bg-beige\/60,
+.dark .bg-beige\/60,
+[data-theme="dark"] .bg-beige\/70,
+.dark .bg-beige\/70,
+[data-theme="dark"] .bg-beige\/50,
+.dark .bg-beige\/50,
+[data-theme="dark"] .bg-white\/80,
+.dark .bg-white\/80,
+[data-theme="dark"] .bg-white\/75,
+.dark .bg-white\/75,
+[data-theme="dark"] .bg-white\/70,
+.dark .bg-white\/70,
+[data-theme="dark"] .bg-\[\#F3E7D3\]\/60,
+.dark .bg-\[\#F3E7D3\]\/60,
+[data-theme="dark"] .bg-\[\#F3E7D3\]\/50,
+.dark .bg-\[\#F3E7D3\]\/50,
+[data-theme="dark"] .bg-\[\#F3E7D3\]\/40,
+.dark .bg-\[\#F3E7D3\]\/40,
+[data-theme="dark"] .bg-slate-50,
+.dark .bg-slate-50,
+[data-theme="dark"] .bg-slate-100,
+.dark .bg-slate-100,
+[data-theme="dark"] .bg-slate-200,
+.dark .bg-slate-200 {
+  background-color: #3C2130 !important;
+  color: #F7EFF3 !important;
+  border-color: #592D44 !important;
+}
+
+/* Card gradients on Homepage and Dashboards */
+[data-theme="dark"] [class*="bg-[linear-gradient(150deg"],
+.dark [class*="bg-[linear-gradient(150deg"],
+[data-theme="dark"] [class*="bg-[linear-gradient(135deg,rgba(255"],
+.dark [class*="bg-[linear-gradient(135deg,rgba(255"],
+[data-theme="dark"] [class*="bg-[rgba(250,247,243"],
+.dark [class*="bg-[rgba(250,247,243"] {
+  background: #301A25 !important;
+  border-color: #592D44 !important;
+}
+
+/* Inputs, textareas, select boxes */
+[data-theme="dark"] input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+.dark input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+[data-theme="dark"] textarea,
+.dark textarea,
+[data-theme="dark"] select,
+.dark select {
+  background-color: #22121A !important;
+  color: #F7EFF3 !important;
+  border-color: #592D44 !important;
+}
+
+/* High-contrast text colors */
+[data-theme="dark"] .text-espresso,
+.dark .text-espresso,
+[data-theme="dark"] .text-\[\#292525\],
+.dark .text-\[\#292525\],
+[data-theme="dark"] .text-\[\#130E0B\],
+.dark .text-\[\#130E0B\],
+[data-theme="dark"] .text-slate-900,
+.dark .text-slate-900,
+[data-theme="dark"] .text-slate-800,
+.dark .text-slate-800,
+[data-theme="dark"] .text-slate-700,
+.dark .text-slate-700,
+[data-theme="dark"] .text-gray-900,
+.dark .text-gray-900,
+[data-theme="dark"] .text-gray-800,
+.dark .text-gray-800 {
+  color: #F7EFF3 !important;
+}
+
+[data-theme="dark"] .text-taupe,
+.dark .text-taupe,
+[data-theme="dark"] .text-\[\#615A5A\],
+.dark .text-\[\#615A5A\],
+[data-theme="dark"] .text-\[\#6F6265\],
+.dark .text-\[\#6F6265\],
+[data-theme="dark"] .text-slate-600,
+.dark .text-slate-600,
+[data-theme="dark"] .text-slate-500,
+.dark .text-slate-500,
+[data-theme="dark"] .text-gray-600,
+.dark .text-gray-600 {
+  color: #C7AFB8 !important;
 }
 
 

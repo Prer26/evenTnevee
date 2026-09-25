@@ -313,12 +313,11 @@ function MarketplacePreview() {
     title: "Discover real Eventneve vendors.",
     description: "Meet a few real vendors currently being introduced through Eventneve. Explore the marketplace to discover more.",
     children: /* @__PURE__ */ jsxs(Reveal, { className: "glass-panel mt-10 rounded-[30px] p-3 shadow-luxe", children: [
-      /* @__PURE__ */ jsxs("div", { className: "rounded-[24px] border border-white/70 bg-white/75 p-4 shadow-soft backdrop-blur", children: [
+      /* @__PURE__ */ jsxs("div", { className: "rounded-[24px] border border-border bg-card/80 p-4 shadow-soft backdrop-blur", children: [
         /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-2 md:flex-row md:items-center", children: [
-          /* @__PURE__ */ jsxs("div", { className: "flex flex-1 items-center gap-3 rounded-2xl border border-champagne/30 bg-[linear-gradient(135deg,rgba(246,237,220,0.85),rgba(255,252,247,0.8))] px-4 py-3.5", children: [
-            /* @__PURE__ */ jsx("span", { className: "grid h-6 w-6 shrink-0 place-items-center rounded-full bg-espresso text-ivory", children: /* @__PURE__ */ jsx(Search, { className: "h-3.5 w-3.5" }) }),
-            /* @__PURE__ */ jsx("input", { value: query, onChange: (e) => setQuery(e.target.value), placeholder: "Search vendors…", className: "w-full bg-transparent text-sm text-espresso placeholder:text-taupe focus:outline-none" }),
-            /* @__PURE__ */ jsx(Search, { className: "h-4 w-4 shrink-0 text-taupe" })
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-1 items-center gap-3 rounded-2xl border border-border bg-card/70 px-4 py-3.5", children: [
+            /* @__PURE__ */ jsx(Search, { className: "h-4 w-4 shrink-0 text-taupe" }),
+            /* @__PURE__ */ jsx("input", { value: query, onChange: (e) => setQuery(e.target.value), placeholder: "Search vendors…", className: "w-full bg-transparent text-sm text-espresso placeholder:text-taupe focus:outline-none" })
           ] }),
           /* @__PURE__ */ jsxs("button", { type: "button", onClick: () => window.dispatchEvent(new CustomEvent("open-nova-chat")), className: "inline-flex items-center justify-center gap-1.5 rounded-2xl bg-[linear-gradient(135deg,var(--champagne),var(--bronze))] px-5 py-3.5 text-[13px] font-semibold text-ivory transition-all duration-300 hover:-translate-y-0.5 hover:shadow-luxe", children: [
             /* @__PURE__ */ jsx(Zap, { className: "h-3.5 w-3.5" }),

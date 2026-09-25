@@ -70,10 +70,11 @@ const publicUser = (u) => ({
 // --- Register ---------------------------------------------------------
 router.post("/register", registerLimiter, validateBody(registerSchema), async (req, res) => {
   const { email, password, full_name, account_type } = req.body || {};
+  const normalizedEmail = email ? email.trim().toLowerCase() : "";
 
   // Case-insensitive email lookup
   const existing = await prisma.user.findFirst({
-    where: { email: { equals: email, mode: "insensitive" } },
+    where: { email: normalizedEmail },
   });
 
   if (existing && existing.emailVerified) {
@@ -106,7 +107,7 @@ router.post("/register", registerLimiter, validateBody(registerSchema), async (r
     await prisma.user.create({
       data: {
         id,
-        email,
+        email: normalizedEmail,
         fullName: full_name || "",
         passwordHash,
         role,
@@ -135,9 +136,9 @@ router.post("/register", registerLimiter, validateBody(registerSchema), async (r
 // --- Verify OTP ---------------------------------------------------------
 router.post("/verify-otp", otpLimiter, validateBody(otpSchema), async (req, res) => {
   const { email, otpCode } = req.body || {};
-
+  const targetEmail = email ? email.trim().toLowerCase() : "";
   const user = await prisma.user.findFirst({
-    where: { email: { equals: email, mode: "insensitive" } },
+    where: { email: targetEmail },
   });
   
   if (!user || !user.otp) return res.status(400).json({ message: "No pending verification for this email" });
@@ -177,9 +178,9 @@ router.post("/verify-otp", otpLimiter, validateBody(otpSchema), async (req, res)
 // --- Resend OTP ---------------------------------------------------------
 router.post("/resend-otp", resendOtpLimiter, validateBody(emailOnlySchema), async (req, res) => {
   const { email } = req.body || {};
-
+  const targetEmail = email ? email.trim().toLowerCase() : "";
   const user = await prisma.user.findFirst({
-    where: { email: { equals: email, mode: "insensitive" } },
+    where: { email: targetEmail },
   });
 
   if (!user || user.emailVerified) return res.json({ message: "If an account exists, a new code has been sent" });
@@ -204,9 +205,10 @@ router.post("/resend-otp", resendOtpLimiter, validateBody(emailOnlySchema), asyn
 // --- Login ---------------------------------------------------------
 router.post("/login", loginLimiter, validateBody(loginSchema), async (req, res) => {
   const { email, password } = req.body || {};
+  const targetEmail = email ? email.trim().toLowerCase() : "";
 
   const user = await prisma.user.findFirst({
-    where: { email: { equals: email, mode: "insensitive" } },
+    where: { email: targetEmail },
   });
 
   if (user && Number(user.lockoutUntil) > Date.now()) {
@@ -270,9 +272,10 @@ router.post("/logout-everywhere", requireAuth, async (req, res) => {
 // --- Password reset request -----------------------------------------------
 router.post("/reset-password-request", passwordResetLimiter, validateBody(emailOnlySchema), async (req, res) => {
   const { email } = req.body || {};
+  const targetEmail = email ? email.trim().toLowerCase() : "";
 
   const user = await prisma.user.findFirst({
-    where: { email: { equals: email, mode: "insensitive" } },
+    where: { email: targetEmail },
   });
 
   if (user) {
