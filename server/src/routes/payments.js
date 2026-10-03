@@ -7,10 +7,11 @@ import prisma from "../lib/prisma.js";
 
 const router = Router();
 
-const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID,
-  key_secret: process.env.RAZORPAY_KEY_SECRET,
-});
+function getRazorpayInstance() {
+  const key_id = process.env.RAZORPAY_KEY_ID || "rzp_test_TfZ7UGMNWvCHif";
+  const key_secret = process.env.RAZORPAY_KEY_SECRET || "qSPAtpSFsZpkZSpg2fVL7gFN";
+  return new Razorpay({ key_id, key_secret });
+}
 
 const createOrderSchema = z.object({
   amount: z.number().positive(),
@@ -80,7 +81,7 @@ router.post("/create-order", requireAuth, async (req, res) => {
     // Razorpay expects the amount in paise
     const amountInPaise = Math.round(amount * 100);
 
-    const order = await razorpay.orders.create({
+    const order = await getRazorpayInstance().orders.create({
       amount: amountInPaise,
       currency: "INR",
       receipt: `txn_${transaction_id}`,
