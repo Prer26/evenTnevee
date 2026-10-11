@@ -6,7 +6,7 @@ import { useTheme } from "@/lib/ThemeContext";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/customer-services", label: "Customer Hub" },
+  { to: "/customer-hub", label: "Customer Hub" },
   { to: "/marketplace", label: "Marketplace" },
   { to: "/features", label: "Features" },
   { to: "/financial-tracker", label: "Financial Tracker" },
@@ -18,22 +18,6 @@ const links = [
   { to: "/contact", label: "Contact" },
 ];
 
-/*
- * Vendor-specific hidden links.
- *
- * Vendors should NOT see:
- * - Marketplace
- * - Financial Tracker
- *
- * Pricing is also not shown to vendors because
- * the vendor dashboard handles their subscription.
- */
-const VENDOR_HIDDEN_LINKS = new Set([
-  "/marketplace",
-  "/financial-tracker",
-  "/login",
-]);
-
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -41,10 +25,36 @@ export default function Navbar() {
   const { isAuthenticated, user, logout } = useAuth();
   const { theme, toggleTheme } = useTheme();
 
-  const navLinks =
-    user?.account_type === "vendor"
-      ? links.filter((l) => !VENDOR_HIDDEN_LINKS.has(l.to))
-      : links;
+  const isVendor = user?.account_type === "vendor";
+  const isPlanner = user?.account_type === "event_planner";
+  const isCustomer = user?.account_type === "customer";
+
+  let navLinks = links;
+
+  if (isVendor) {
+    // Vendors do NOT see Marketplace, Financial Tracker, Pricing, or Customer Hub
+    navLinks = links.filter(
+      (l) =>
+        l.to !== "/marketplace" &&
+        l.to !== "/financial-tracker" &&
+        l.to !== "/login" &&
+        l.to !== "/customer-services" &&
+        l.to !== "/customer-hub"
+    );
+  } else if (isPlanner) {
+    // Event Planners do NOT see Customer Hub
+    navLinks = links.filter(
+      (l) => l.to !== "/customer-services" && l.to !== "/customer-hub"
+    );
+  } else if (isCustomer) {
+    // Customers see Home, Customer Hub, Features, About, Contact
+    navLinks = links.filter(
+      (l) =>
+        l.to !== "/marketplace" &&
+        l.to !== "/financial-tracker" &&
+        l.to !== "/login"
+    );
+  }
 
   useEffect(() => {
     const onScroll = () => {
@@ -120,11 +130,15 @@ export default function Navbar() {
                 to={
                   user?.account_type === "vendor"
                     ? "/vendor-dashboard"
+                    : user?.account_type === "customer"
+                    ? "/customer-hub"
                     : "/dashboard"
                 }
                 className="hidden rounded-full px-4 py-2 text-[13.5px] font-medium text-[#292525] transition-colors hover:bg-[#E8C7CF]/70 md:inline-flex"
               >
-                {user?.full_name || user?.email || "Dashboard"}
+                {user?.account_type === "customer"
+                  ? (user?.full_name || "Customer Hub")
+                  : (user?.full_name || user?.email || "Dashboard")}
               </Link>
 
               {/* Logout */}

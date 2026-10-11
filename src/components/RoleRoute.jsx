@@ -10,7 +10,9 @@ export default function RoleRoute({ allow }) {
   const accountType = user?.account_type || "event_planner";
 
   if (accountType !== allow) {
-    return <Navigate to={accountType === "vendor" ? "/vendor-dashboard" : "/dashboard"} replace />;
+    if (accountType === "vendor") return <Navigate to="/vendor-dashboard" replace />;
+    if (accountType === "customer") return <Navigate to="/customer-hub" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
   return <Outlet />;

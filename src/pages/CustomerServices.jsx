@@ -149,6 +149,15 @@ export default function CustomerServices() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCity, setSelectedCity] = useState("All");
 
+  // Redirect vendors and event planners away from the customer hub
+  useEffect(() => {
+    if (user?.account_type === "vendor") {
+      navigate("/vendor-dashboard", { replace: true });
+    } else if (user?.account_type === "event_planner") {
+      navigate("/dashboard", { replace: true });
+    }
+  }, [user, navigate]);
+
   // Modal States
   const [bookingTarget, setBookingTarget] = useState(null); // target planner or vendor
   const [dmTarget, setDmTarget] = useState(null); // target for messaging
@@ -328,6 +337,13 @@ export default function CustomerServices() {
           <p className="mt-4 text-[15px] leading-relaxed text-taupe sm:text-[16.5px]">
             Explore verified event managers, luxury caterers, photographers, and decorators in one place. Request instant quotes, book services, and direct message (DM) providers seamlessly.
           </p>
+
+          {user?.account_type === "customer" && (
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold text-primary">
+              <BadgeCheck className="h-4 w-4" />
+              Logged in as Customer ({user?.full_name || user?.email})
+            </div>
+          )}
 
           {/* TAB SWITCHER */}
           <div className="mt-8 flex flex-wrap items-center gap-3">

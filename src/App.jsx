@@ -83,6 +83,7 @@ function App() {
             <ScrollToTop />
             <Routes>
               <Route path="/login" element={<Login />} />
+              <Route path="/customer-login" element={<Login initialRole="customer" />} />
               <Route path="/register" element={<Register />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/reset-password" element={<ResetPassword />} />
@@ -94,6 +95,7 @@ function App() {
                   <Route path="/pricing" element={<Pricing />} />
                 </Route>
                 <Route path="/about" element={<About />} />
+                <Route path="/customer-hub" element={<CustomerServices />} />
                 <Route path="/customer-services" element={<CustomerServices />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/features" element={<Features />} />

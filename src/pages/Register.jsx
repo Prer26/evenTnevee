@@ -1,16 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { UserPlus, Mail, Lock, Loader2, CalendarHeart, Store, ArrowLeft } from "lucide-react";
+import { UserPlus, Mail, Lock, Loader2, CalendarHeart, Store, Sparkles, ArrowLeft } from "lucide-react";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
 import AuthLayout from "@/components/AuthLayout";
 import { toast } from "@/components/ui/use-toast";
 
 export default function Register() {
-  const [accountType, setAccountType] = useState(null); // "event_planner" | "vendor" — chosen first, before anything else
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const queryRole = searchParams.get("role");
+
+  const [accountType, setAccountType] = useState(
+    ["customer", "event_planner", "vendor"].includes(queryRole) ? queryRole : null
+  );
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -45,7 +51,12 @@ export default function Register() {
       if (result?.access_token) {
         base44.auth.setToken(result.access_token);
       }
-      window.location.href = accountType === "vendor" ? "/vendor-dashboard" : "/dashboard";
+      window.location.href =
+        accountType === "vendor"
+          ? "/vendor-dashboard"
+          : accountType === "customer"
+          ? "/customer-hub"
+          : "/dashboard";
     } catch (err) {
       setError(err.message || "Invalid verification code");
     } finally {
@@ -81,7 +92,20 @@ export default function Register() {
           </>
         }
       >
-        <div className="grid gap-4">
+        <div className="grid gap-3">
+          <button
+            type="button"
+            onClick={() => setAccountType("customer")}
+            className="flex items-center gap-4 p-5 rounded-xl border border-border text-left hover:border-primary hover:bg-primary/5 transition-colors"
+          >
+            <div className="flex items-center justify-center w-11 h-11 rounded-full bg-primary/10 shrink-0">
+              <Sparkles className="w-5 h-5 text-primary" aria-hidden="true" />
+            </div>
+            <div>
+              <p className="font-semibold text-foreground">I'm a Customer</p>
+              <p className="text-sm text-muted-foreground">Browse planners & vendors, book services, and direct message</p>
+            </div>
+          </button>
           <button
             type="button"
             onClick={() => setAccountType("event_planner")}

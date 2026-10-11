@@ -26,7 +26,7 @@ const strongPassword = z
     message: "Password must include a letter and a number",
   });
 
-const accountTypeSchema = z.enum(["event_planner", "vendor"]);
+const accountTypeSchema = z.enum(["event_planner", "vendor", "customer"]);
 
 const registerSchema = z.object({
   email: emailSchema,
